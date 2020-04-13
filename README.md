@@ -2,7 +2,7 @@
 
 Zakhar's facial expressions
 
-*A part of the [Zakhar Project](https://github.com/an-dr/zakhar)*
+Part of the [Zakhar: A robotics UX project](https://github.com/an-dr/zakhar)
 
 ## Copyrights
 
