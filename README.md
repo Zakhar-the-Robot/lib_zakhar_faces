@@ -1,11 +1,28 @@
-# zakhar_faces
+# lib_zakhar_faces
 
-Zakhar's facial expressions
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Lib Version](https://img.shields.io/badge/Version-2-green.svg) [![Main - Page](https://img.shields.io/badge/Project-Zakhar%20the%20Robot-yellow)](https://github.com/Zakhar-the-Robot "See project sources on Github")
 
-Part of the [Zakhar: A robotics UX project](https://github.com/an-dr/zakhar)
+Zakhar facial expressions.
 
-## Copyrights
+## Usage
 
-Copyright (c) 2020, Andrei Gramakov
+The target of the library is ESP-IDF framework.
 
-Copyright (c) 2020, Svetlana Iakurnova
+Include it in your CMakeFileLists.txt and then add two constants to your `idf_component_register`:
+
+- FACES_INCLUDES - access to use "faces.h" in your code
+- FACES_FILES - list of the jpg files
+
+## Example
+
+Example of the CMakeFileLists.txt
+
+```cmake
+include("../components/lib_zakhar_faces/faces.cmake")
+
+idf_component_register( SRCS "main.cpp" 
+                        INCLUDE_DIRS "." ${FACES_INCLUDES}
+                        EMBED_FILES ${FACES_FILES} )
+```
+
+and then access the images using constant from the [faces.h](include/faces.h).
