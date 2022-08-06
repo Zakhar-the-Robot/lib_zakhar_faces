@@ -8,14 +8,14 @@ Zakhar facial expressions.
 
 The target of the library is ESP-IDF framework.
 
-Include it in your CMakeFileLists.txt and then add two constants to your `idf_component_register`:
+Include it in your CMakeLists.txt and then add two constants to your `idf_component_register`:
 
 - FACES_INCLUDES - access to use "faces.h" in your code
 - FACES_FILES - list of the jpg files
 
 ## Example
 
-Example of the CMakeFileLists.txt
+Example of the CMakeLists.txt
 
 ```cmake
 include("../components/lib_zakhar_faces/faces.cmake")
